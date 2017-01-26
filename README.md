@@ -82,10 +82,12 @@ Note that the default behavior of `train.py` is to start the remotes on a local 
 ### VNC Pong
 
 Start docker virtual machine:
-`docker run -p 5900:5900 -p 15900:15900 --cap-add SYS_ADMIN --privileged --ipc host quay.io/openai/universe.gym-core`
 
-Start the client training:
-`python train.py --num-workers 2 --env-id gym-core.PongDeterministic-v3 --log-dir /tmp/vncpong`
+ `docker run -p 5900:5900 -p 15900:15900 --cap-add SYS_ADMIN --privileged --ipc host quay.io/openai/universe.gym-core`
+
+Start the client training: 
+
+ `python train.py --num-workers 2 --env-id gym-core.PongDeterministic-v3 --log-dir /tmp/vncpong`
 
 _Peeking into the agent's environment with TurboVNC_
 
